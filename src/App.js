@@ -57,7 +57,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/webhome" element={<Webhome addToCart={addToCart} cartItems={cartItems} />} />
+      <Route path="/" element={<Webhome addToCart={addToCart} cartItems={cartItems} />} />
         <Route path="/webabout" element={<Webabout />} />
         <Route path="/webproduct" element={<Webproduct />} />
       <Route path="/webproduct" element={<Webproduct addToCart={addToCart} cartItems={cartItems} />} />

@@ -31,7 +31,8 @@ root.render(
        <BrowserRouter>
     {/* <Lastnavebar/> */}
       <Routes>
-        <Route path="/" element={<Dashboard/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+        {/* <Route path="/" element={<Dashboard/>} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
          <Route path="/product" element={<Product />} />
          <Route path="/addproduct" element={<Addproduct />} />
