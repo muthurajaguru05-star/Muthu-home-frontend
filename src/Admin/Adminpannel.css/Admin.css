@@ -1,0 +1,226 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); */
+
+/* SIDEBAR */
+
+.admindashboard{
+    width:260px;
+    height:100vh;
+    background:linear-gradient(180deg,#f8fafc,#eef2ff);
+    border-right:1px solid #e5e7eb;
+    box-shadow:5px 0 20px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:0;
+
+    display:flex;
+    flex-direction:column;
+
+    animation:sidebarFade .8s ease;
+}
+
+@keyframes sidebarFade{
+    from{
+        opacity:0;
+        transform:translateX(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* PROFILE IMAGE */
+
+.adminmale{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #10b981;
+
+    margin:25px auto 15px;
+
+    transition:.4s;
+}
+
+.adminmale:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(16,185,129,.4);
+}
+
+/* ONLINE */
+
+.online{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    color:#10b981;
+    font-size:14px;
+}
+
+.online i{
+    animation:rotate 3s linear infinite;
+    
+}
+
+@keyframes rotate{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* ADMIN NAME */
+
+.dikbox{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+
+    margin-top:15px;
+    margin-bottom:40px;
+}
+
+.dikbox h3{
+    font-size:28px;
+    color:#0f172a;
+}
+
+.dikbox i{
+    color:#10b981;
+    font-size:25px;
+}
+
+/* MENU CONTAINER */
+
+.adminmenu{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* BUTTON */
+
+.adminbtn{
+    width:220px;
+    height:52px;
+
+    margin:auto;
+
+    border:none;
+    outline:none;
+    border-radius:14px;
+
+    background:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.adminbtn:hover{
+    background:linear-gradient(90deg,#10b981,#38bdf8);
+    transform:translateX(8px);
+
+    box-shadow:0 8px 20px rgba(16,185,129,.3);
+}
+
+.adminbtn:hover i{
+    color:white;
+}
+
+.adminbtn:hover .adminlink{
+    color:white;
+}
+
+/* LINK */
+
+.adminlink{
+    text-decoration:none;
+    color:#0f172a;
+    font-size:15px;
+    font-weight:500;
+}
+
+/* ICON */
+
+.adminbtn i{
+    color:#1e293b;
+    font-size:18px;
+    transition:.3s;
+}
+
+.adminbtn:hover i{
+    transform:scale(1.2);
+}
+
+/* LOGOUT BUTTON */
+
+.logout-btn{
+    margin-top:auto;
+    margin-bottom:30px;
+}
+
+/* ACTIVE MENU */
+
+.active{
+    background:linear-gradient(90deg,#10b981,#38bdf8);
+}
+
+.active .adminlink{
+    color:white;
+}
+
+.active i{
+    color:white;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#10b981;
+    border-radius:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.admindashboard{
+    width:80px;
+}
+
+.adminlink,
+.online span,
+.dikbox h3{
+    display:none;
+}
+
+.adminbtn{
+    width:60px;
+    justify-content:center;
+}
+
+.adminbtn i{
+    margin:0;
+}
+
+.adminmale{
+    width:60px;
+    height:60px;
+}
+
+}

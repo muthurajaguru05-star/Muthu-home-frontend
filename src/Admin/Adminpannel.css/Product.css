@@ -1,0 +1,291 @@
+.maincontainer {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+  animation: pageFade 0.6s ease;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* PAGE FADE */
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CONTENT */
+.procontent {
+  flex: 1;
+  padding: 20px;
+  animation: contentUp 0.8s ease;
+}
+
+@keyframes contentUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TOTAL PRODUCTS CARD */
+.totalproducts {
+  width: 160px;
+  height: 80px;
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #14b8a6, #22c55e);
+  box-shadow: 0 12px 25px rgba(20,184,166,0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* animation: popIn 0.6s ease; */
+  /* transition: all 0.3s ease; */
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.totalproducts:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+.totalproducts span {
+  font-size: 16px;
+  /* opacity: 0.9; */
+  letter-spacing: 0.5px;
+  margin-top: 25px;
+}
+
+.totalproducts h2 {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* ADD PRODUCT BUTTON */
+.addproductclick {
+  background: linear-gradient(90deg, #22c55e, #10b981);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: 0.3s;
+  animation: slideDown 0.6s ease;
+  box-shadow: 0 8px 18px rgba(34,197,94,0.25);
+  margin-left: 1100px;
+  margin-top: -30px; 
+
+}
+.addproductclick {
+  transform: translateY(-40px); /* 🔥 clean upward move */
+}
+
+.addproductclick:hover {
+  filter: brightness(1.1);
+}
+
+.addproductclick a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HEADING */
+.productheading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeDown 0.6s ease;
+   margin-left: 500px;
+  margin-top: -70px;  
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productheading i {
+  transition: 0.3s;
+}
+
+.productheading:hover i {
+  transform: rotate(15deg) scale(1.2);
+  color: #10b981;
+}
+
+/* TABLE */
+/* .producttable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+   table-layout: fixed; 
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: tableFade 0.8s ease;
+   display: block;
+  max-height: 70vh;
+  overflow-y: auto;
+
+} */
+ .producttable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  table-layout: fixed;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: tableFade 0.8s ease;
+}
+
+@keyframes tableFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ROW */
+.producttable tr {
+  transition: 0.3s ease;
+}
+
+.producttable tr:hover {
+  background: #f1f5f9;
+  transform: scale(1.01);
+}
+
+/* HEADER */
+.producttable th {
+  background: #0f172a;
+  color: white;
+  /* padding: 12px; */
+  height: 50px;
+  width: 150px;  
+  /* max-width: 250px; */
+  overflow: hidden;
+}
+
+/* CELL */
+.producttable td {
+  /* padding: 12px; */
+  height: 100px;
+  text-align: center;
+  width: 300px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.producttable img {
+  width: 75px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.producttable img:hover {
+  transform: scale(1.15);
+}
+
+/* BUTTONS */
+.producttable button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* EDIT */
+.producttable button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.producttable button:first-child:hover {
+  transform: scale(1.1);
+  background: #16a34a;
+}
+
+/* DELETE */
+.producttable button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.producttable button:last-child:hover {
+  transform: scale(1.1);
+  background: #dc2626;
+}
+
+/* PAGINATION */
+.paginationproduct {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  animation: fadeUp 0.7s ease;
+  width: 100%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.paginationproduct button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #e2e8f0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.paginationproduct button:hover {
+  background: #10b981;
+  color: white;
+  transform: scale(1.1);
+}
+
+.activePage {
+  background: #10b981 !important;
+  color: white !important;
+}

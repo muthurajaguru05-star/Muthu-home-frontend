@@ -1,0 +1,258 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* ===================== LAYOUT ==================== */
+
+.layout{
+    display:flex;
+    height:100vh;
+    animation:pageFade .8s ease;
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content{
+    flex:1;
+    background:#f4f7fe;
+    animation:slideUp .8s ease;
+        overflow-y:auto;
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= HEADER ================= */
+
+.dashboard-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.dashboard-header i{
+    color:#4361ee;
+    font-size:25px;
+    transition:.4s;
+}
+
+.dashboard-header:hover i{
+    transform:rotate(20deg);
+}
+
+.dashboard-header h2{
+    font-size:30px;
+    font-weight:600;
+}
+
+/* ================= CARDS ================= */
+
+.box-container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    width:200px;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+
+    animation:cardAnimation .8s ease;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.1);
+
+    transition:.4s;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    width:200px;
+    height:200px;
+    background:rgba(255,255,255,.15);
+    border-radius:50%;
+    top:-100px;
+    right:-100px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 20px 35px rgba(0,0,0,.18);
+}
+
+@keyframes cardAnimation{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.card h3{
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.card span{
+    font-size:42px;
+    font-weight:700;
+}
+
+/* CARD COLORS */
+
+.user-card{
+    background:linear-gradient(135deg,#1e88e5,#42a5f5);
+}
+
+.product-card{
+    background:linear-gradient(135deg,#43a047,#66bb6a);
+}
+
+.category-card{
+    background:linear-gradient(135deg,#ff9800,#ffb74d);
+}
+
+.sales-card{
+    background:linear-gradient(135deg,#e91e63,#f06292);
+}
+
+/* ================= CHART ================= */
+
+.chart-container{
+    display:flex;
+    gap:25px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.chart-box{
+    flex:1;
+    min-width:450px;
+    background:rgba(255,255,255,.8);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:25px;
+    padding:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.1);
+
+    transition:.4s;
+  height:380px;
+    animation:chartFade .8s ease;
+}
+
+.chart-box:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+@keyframes chartFade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e9ecef;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#4361ee;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+.chart-box{
+    min-width:100%;
+}
+
+}
+
+@media(max-width:768px){
+
+.main-content{
+    padding:15px;
+}
+
+.dashboard-header h2{
+    font-size:28px;
+}
+
+.card{
+    min-width:100%;
+}
+
+.chart-box{
+    min-width:100%;
+}
+
+.card span{
+    font-size:35px;
+}
+
+}
+
+@media(max-width:500px){
+
+.dashboard-header h2{
+    font-size:23px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+.card span{
+    font-size:30px;
+}
+
+}

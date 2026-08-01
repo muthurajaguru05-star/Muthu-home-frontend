@@ -1,0 +1,316 @@
+/* .product-info-page{
+    padding:40px;
+}
+
+.product-info-container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.productinfo-image img{
+    width:350px;
+    border-radius:10px;
+    transition: transform 0.3s ease;
+}
+
+.productinfo-image img:hover{
+    transform: translateX(-10px) scale(1.05);
+}
+.productinfo-details{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.productinfo-price{
+    margin-right: 800px;
+    color:green;
+}
+
+.productinfo-old-price{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.productinfo-offer{
+    color:red;
+    font-weight:bold;
+}
+
+.productinfo-cart-btn{
+    width:200px;
+    padding:12px;
+    border:none;
+    background:rgb(5, 143, 39);
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    
+}
+
+.productinfo-cart-btn:hover{
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid rgb(4, 146, 27)
+    
+}
+.infobtn{
+   display: flex;
+   gap: 30px;
+}
+.productinfo-cart-btn2{
+    width:200px;
+    padding:12px;
+    border:none;
+    background:rgb(230, 12, 12);
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+.productinfo-cart-btn2:hover{
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid red
+} */
+ /* Page load animation */
+
+
+
+
+
+.product-info-page{
+    padding:40px;
+
+    animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main container */
+.product-info-container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+
+    animation: containerSlide 0.8s ease;
+}
+
+@keyframes containerSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* IMAGE */
+.productinfo-image img{
+    width:350px;
+    border-radius:10px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+
+    animation: imagePop 0.8s ease;
+}
+
+/* image entry */
+@keyframes imagePop {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* hover effect */
+.productinfo-image img:hover{
+    transform: translateX(-10px) scale(1.08);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* DETAILS */
+.productinfo-details{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+    animation: detailsFade 1s ease;
+}
+
+@keyframes detailsFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TITLE */
+.productinfo-details h1{
+    transition: 0.3s ease;
+}
+
+.productinfo-details h1:hover{
+    color: #ff4d4d;
+}
+
+/* PRICE */
+.productinfo-price{
+    margin-right: 800px;
+    color:green;
+    font-size: 28px;
+
+    animation: priceGlow 2s infinite alternate;
+}
+
+/* glowing price */
+@keyframes priceGlow {
+    from {
+        text-shadow: 0 0 5px rgba(0,255,0,0.3);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(0,255,0,0.8);
+    }
+}
+
+/* OLD PRICE */
+.productinfo-old-price{
+    text-decoration:line-through;
+    color:gray;
+}
+
+/* OFFER */
+.productinfo-offer{
+    color:red;
+    font-weight:bold;
+
+    animation: blinkOffer 1.5s infinite;
+}
+
+@keyframes blinkOffer {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* BUTTON CONTAINER */
+.infobtn{
+   display: flex;
+   gap: 30px;
+
+   animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ADD TO CART BUTTON */
+.productinfo-cart-btn{
+    width:200px;
+    padding:12px;
+    border:none;
+    background:linear-gradient(45deg, #05a32b, #0be94a);
+    color:white;
+    cursor:pointer;
+    border-radius:8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover */
+.productinfo-cart-btn:hover{
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid rgb(4, 146, 27);
+    transform: scale(1.05);
+    /* box-shadow: 0 10px 20px rgba(4,146,27); */
+}
+
+/* shine effect */
+.productinfo-cart-btn::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-75%;
+    width:50%;
+    height:100%;
+    background:rgba(255,255,255,0.3);
+    transform:skewX(-20deg);
+}
+
+.productinfo-cart-btn:hover::after{
+    animation: shine 0.7s ease;
+}
+
+/* BUY NOW BUTTON */
+.productinfo-cart-btn2{
+    width:200px;
+    padding:12px;
+    border:none;
+    background:linear-gradient(45deg, #e60c0c, #ff4d4d);
+    color:white;
+    cursor:pointer;
+    border-radius:8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover */
+.productinfo-cart-btn2:hover{
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid red;
+    transform: scale(1.05);
+    /* box-shadow: 0 10px 20px rgba(255,0,0,0.3); */
+}
+
+/* shine */
+.productinfo-cart-btn2::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-75%;
+    width:50%;
+    height:100%;
+    background:rgba(255,255,255,0.3);
+    transform:skewX(-20deg);
+}
+
+.productinfo-cart-btn2:hover::after{
+    animation: shine 0.7s ease;
+}
+
+/* shared shine animation */
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}

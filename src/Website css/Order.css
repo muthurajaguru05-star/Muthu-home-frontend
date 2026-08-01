@@ -1,0 +1,234 @@
+/* ===========================
+   ORDER PAGE
+=========================== */
+/* Button */
+
+.order-btn{
+    margin-top:25px;
+    padding:14px 32px;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    color:#fff;
+    background:linear-gradient(135deg,#ff6b00,#ff9800);
+    box-shadow:0 10px 25px rgba(255,107,0,.35);
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.order-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.35);
+    transform:skewX(-30deg);
+    transition:.7s;
+}
+
+.order-btn:hover::before{
+    left:120%;
+}
+
+.order-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(255,107,0,.45);
+}
+
+.order-btn:active{
+    transform:scale(.96);
+}
+
+
+/* Card */
+
+.order-width{
+    width:100%;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    animation:fadeUp .8s ease;
+}
+
+
+/* Heading */
+
+.order-width h1{
+    font-size:32px;
+    color:#222;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.order-width h1::after{
+    content:"";
+    width:70px;
+    height:4px;
+    background:#ff6b00;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    border-radius:20px;
+}
+
+
+/* Table */
+
+.order-table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+    background:#fff;
+}
+
+
+/* Header */
+
+.order-table th{
+    padding:18px;
+    background:linear-gradient(135deg,#ff6b00,#ff9800);
+    color:#fff;
+    font-size:16px;
+    letter-spacing:.5px;
+}
+
+
+/* Body */
+
+.order-table td{
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid #ececec;
+    transition:.3s;
+}
+
+
+/* Hover */
+
+.order-table tbody tr{
+    transition:.3s;
+}
+
+.order-table tbody tr:hover{
+    background:#fff6ef;
+    transform:scale(1.01);
+}
+
+
+/* Zebra */
+
+.order-table tbody tr:nth-child(even){
+    background:#fafafa;
+}
+
+
+/* Product */
+
+.order-table td div{
+    margin-bottom:12px;
+}
+
+.order-table td p{
+    margin:4px 0;
+    color:#555;
+    font-size:14px;
+}
+
+
+/* Image */
+
+.order-image{
+    width:75px;
+    height:75px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid #fff;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    transition:.35s;
+}
+
+.order-image:hover{
+    transform:scale(1.12) rotate(3deg);
+}
+
+
+/* Line */
+
+.order-table hr{
+    border:none;
+    height:1px;
+    background:#ececec;
+    margin-top:12px;
+}
+
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.order-width{
+
+padding:20px;
+
+overflow:auto;
+
+}
+
+.order-table{
+
+min-width:850px;
+
+}
+
+}
+
+
+/* Scroll Bar */
+
+.order-width::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.order-width::-webkit-scrollbar-thumb{
+
+background:#ff9800;
+border-radius:20px;
+
+}
+
+.order-width::-webkit-scrollbar-track{
+
+background:#eee;
+
+}

@@ -1,0 +1,242 @@
+.maincontainer {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+  animation: pageFade 0.6s ease;
+}
+
+/* PAGE FADE */
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* SIDEBAR */
+.catsidebar {
+  min-height: 100vh;
+  background: #0f172a;
+  box-shadow: 3px 0 20px rgba(0,0,0,0.1);
+  animation: slideLeft 0.7s ease;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 20px;
+  animation: contentUp 0.8s ease;
+}
+
+@keyframes contentUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  animation: fadeDown 0.6s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.total-box {
+  width: 170px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 16px;
+  color: white;
+
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+
+  box-shadow: 0 10px 25px rgba(59,130,246,0.25);
+
+  transition: all 0.3s ease;
+
+  animation: popIn 0.6s ease;
+}
+
+/* POP ANIMATION */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* HOVER EFFECT */
+.total-box:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* TITLE */
+.cath2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* NUMBER (if you have count text) */
+.total-box span {
+  /* font-size: 22px; */
+  font-weight: bold;
+  margin-top: 5px;
+}
+/* ADD BUTTON */
+.addcategory {
+  background: linear-gradient(90deg, #22c55e, #10b981);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 8px 18px rgba(34,197,94,0.25);
+  animation: slideDown 0.6s ease;
+}
+
+.addcategory:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+.addcategory a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HEADING */
+.categorehead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  animation: fadeUp 0.6s ease;
+  margin-left: 450px;
+}
+
+.categorehead i {
+  transition: 0.3s;
+}
+
+.categorehead:hover i {
+  transform: rotate(15deg) scale(1.2);
+  color: #10b981;
+}
+
+/* TABLE */
+.categoretable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: tableFade 0.8s ease;
+}
+
+@keyframes tableFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ROW */
+.categoretable tr {
+  transition: 0.3s;
+}
+
+.categoretable tr:hover {
+  background: #f1f5f9;
+  transform: scale(1.01);
+}
+
+/* HEAD */
+.categoretable th {
+  background: #0f172a;
+  color: white;
+  padding: 12px;
+}
+
+/* CELL */
+.categoretable td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* BUTTONS */
+.categoretable button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* EDIT */
+.categoretable button:first-child {
+  background: #22c55e;
+}
+
+.categoretable button:first-child:hover {
+  transform: scale(1.1);
+  background: #16a34a;
+}
+
+/* DELETE */
+.categoretable button:last-child {
+  background: #ef4444;
+}
+
+.categoretable button:last-child:hover {
+  transform: scale(1.1);
+  background: #dc2626;
+}

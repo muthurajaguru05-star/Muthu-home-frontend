@@ -1,0 +1,242 @@
+
+/* ================= MAIN ================= */
+
+.main-container {
+  padding: 30px;
+  background: linear-gradient(180deg, #faf2f3, #f5f7ff);
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* ================= ABOUT BOX (GLASS EFFECT) ================= */
+
+.about-box {
+  padding: 35px 60px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+}
+
+.about-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ff4d6d, #4d7cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= AC SECTION ================= */
+
+.about-image {
+  width: 100%;
+  max-width: 1550px;
+  height: 420px;
+  border-radius: 16px;
+  margin-top: 25px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.6s ease;
+  filter: brightness(0.95);
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 40px 0 25px;
+  color: #1f2b61;
+  position: relative;
+}
+
+.about-heading::after {
+  content: "";
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4d6d, #4d7cff);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.about-text {
+  width: 75%;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: center;
+  background: rgba(255,255,255,0.5);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+}
+
+.about-text:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= IPHONE SECTION ================= */
+
+.iphone-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 90px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.iphone-image-section {
+  width: 45%;
+  text-align: center;
+}
+
+.iphone-image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  transition: all 0.6s ease;
+}
+
+.iphone-image:hover {
+  transform: scale(1.07) rotate(-1deg);
+}
+
+.iphone-text-section {
+  width: 50%;
+}
+
+.about-iphone {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.about-iphonetext {
+  font-size: 18px;
+  line-height: 2;
+  background: rgba(255,255,255,0.7);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+}
+
+.about-iphonetext:hover {
+  transform: translateY(-6px);
+}
+
+/* ================= TV SECTION ================= */
+
+.tv-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 90px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.tv-text-section {
+  width: 50%;
+}
+
+.tv-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.tv-text {
+  font-size: 18px;
+  line-height: 2;
+  background: rgba(255,255,255,0.7);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+}
+
+.tv-text:hover {
+  transform: translateY(-6px);
+}
+
+.tv-image-section {
+  width: 45%;
+  text-align: center;
+}
+
+.tv-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  transition: all 0.6s ease;
+}
+
+.tv-image:hover {
+  transform: scale(1.07) rotate(1deg);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .iphone-container,
+  .tv-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .iphone-image-section,
+  .iphone-text-section,
+  .tv-image-section,
+  .tv-text-section {
+    width: 100%;
+  }
+
+  .about-text {
+    width: 90%;
+  }
+}

@@ -1,0 +1,235 @@
+.checkoutdiv {
+  width: 650px;
+  margin: 60px auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.7s ease;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* glowing background animation */
+.checkoutdiv::before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  background: radial-gradient(circle, rgba(255,0,0,0.08), transparent 60%);
+  animation: rotateGlow 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* TITLE */
+.checkoutdiv h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+}
+
+.checkoutdiv h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff0000, #ff5e5e);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* FORM */
+.checkoutform {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+/* INPUTS */
+.checkname,
+.checkoutnumber,
+.checkoutaddress {
+  width: 100%;
+  padding: 14px 15px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+/* input focus glow */
+.checkname:focus,
+.checkoutnumber:focus,
+.checkoutaddress:focus {
+  background: #fff;
+  border: 2px solid #ff3b3b;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* textarea */
+.checkoutaddress {
+  height: 110px;
+  resize: none;
+}
+
+/* =========================
+   PRODUCT SUMMARY CARD
+========================= */
+
+.checkout-products {
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(250,250,250,0.9);
+  border: 1px solid #eee;
+  backdrop-filter: blur(8px);
+}
+
+/* EACH PRODUCT */
+.checkout-product {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+/* hover effect */
+.checkout-product:hover {
+  background: #fff;
+  transform: translateX(6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.checkout-product img {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.checkout-product:hover img {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* TEXT */
+.checkout-product h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checkout-product p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* TOTAL */
+.checkout-products span {
+  display: block;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: #111;
+}
+
+/* =========================
+   BUTTON (ULTRA MODERN)
+========================= */
+
+.checkoutbtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff0000, #ff5e5e);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* hover lift */
+.checkoutbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255,0,0,0.25);
+}
+
+/* ripple effect */
+.checkoutbtn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-25deg);
+}
+
+.checkoutbtn:hover::after {
+  animation: shine 0.7s ease;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .checkoutdiv {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .checkout-product {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

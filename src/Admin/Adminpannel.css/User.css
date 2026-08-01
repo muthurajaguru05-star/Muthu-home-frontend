@@ -1,0 +1,260 @@
+/* Main Layout */
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fc;
+  margin-top: -8px;
+}
+
+/* Sidebar */
+.main-layout > *:first-child {
+  width: 250px;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 25px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Top Section */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Total Users Card */
+.total-userbox {
+  width: 180px;
+  padding: 15px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideLeft 0.8s ease;
+}
+
+.total-userbox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(79, 172, 254, 0.5);
+}
+
+.total-userbox span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.total-userbox h2 {
+  margin-top: 8px;
+  font-size: 28px;
+}
+
+/* User Header */
+.wholeuser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideRight 0.8s ease;
+}
+
+.wholeuser i {
+  font-size: 45px;
+  color: #3498db;
+  transition: transform 0.3s ease;
+}
+
+.wholeuser:hover i {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.userh2 {
+  color: #2c3e50;
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-right: 600px
+}
+
+/* Table */
+.usertable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease;
+}
+
+.usertable thead {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+.usertable th {
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.usertable td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.usertable tbody tr {
+  transition: all 0.3s ease;
+}
+
+.usertable tbody tr:hover {
+  background: #eef7ff;
+  transform: scale(1.01);
+}
+
+/* Alternate Row Colors */
+.usertable tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Delete Button */
+.usertable button {
+  padding: 8px 15px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.usertable button:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* Animations */
+/* ========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ===== Pagination Container ===== */
+.pagination-baruser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.page-btnuser {
+  min-width: 46px;
+  height: 46px;
+  /* padding: 0 18px; */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #374151;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  position: relative;
+  margin-top: 500px;
+  right: 700px;
+}
+
+/* Hover */
+.page-btnuser:hover:not(:disabled) {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Active Page */
+.page-btnuser.active-page {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+}
+
+/* Disabled */
+.page-btnuser:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Click Effect */
+.page-btnuser:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pagination-baruser {
+    gap: 8px;
+    /* margin: 25px 10px; */
+  }
+
+  .page-btnuser {
+    min-width: 10px;
+    height: 10px;
+    font-size: 10px;
+    /* padding: 0 10px; */
+  }
+}
