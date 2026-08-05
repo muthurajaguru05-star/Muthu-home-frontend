@@ -32,8 +32,8 @@
 }
 /* WHOLE PAGE WRAPPER */
 .wholecontactpage {
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   background: #0a0f1f;
@@ -301,12 +301,27 @@
 /* mobile */
 
 @media(max-width:900px) {
+  .contact-section {
+    padding: 20px 10px;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
-    padding: 30px;
+    padding: 20px;
+    gap: 25px;
+    width: 95%;
   }
 
   .contact-info h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
   }
 }

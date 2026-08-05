@@ -537,6 +537,15 @@
 
 @media(max-width:768px){
 
+  .webcart-container {
+    width: 95%;
+    padding: 15px 0;
+  }
+
+  .webcart-left {
+    padding: 20px 15px;
+  }
+
   .webcart-content{
     flex-direction:column;
   }
@@ -544,16 +553,22 @@
   .webcart-left,
   .webcart-right{
     width:100%;
+    box-sizing: border-box;
   }
 
   .webcart-product{
     flex-direction:column;
     text-align:center;
+    padding: 15px;
   }
 
   .webproduct-details{
     margin-left:0;
     margin-top:15px;
+  }
+
+  .webqty-box {
+    justify-content: center;
   }
 
   .webcart-product img{

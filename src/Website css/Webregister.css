@@ -10,8 +10,10 @@
 /* MAIN BOX */
 
 .registercontainer{
-    width:1000px;
-    height:600px;
+    width:95%;
+    max-width:1000px;
+    min-height:600px;
+    box-sizing:border-box;
     background:white;
 
     display:flex;
@@ -296,8 +298,10 @@
 /* MAIN BOX */
 
 .login-container{
-    width:1000px;
-    height:550px;
+    width:95%;
+    max-width:1000px;
+    min-height:550px;
+    box-sizing:border-box;
     display:flex;
     overflow:hidden;
     border-radius:25px;
@@ -550,4 +554,35 @@
 
 .showpasswordbtn:hover {
     color: #083f79;
+}
+
+@media(max-width:900px){
+
+    .login-container{
+        flex-direction:column;
+        height:auto;
+        width:95%;
+    }
+
+    .login-left{
+        min-height:220px;
+        padding:40px 25px;
+    }
+
+    .login-left::after{
+        display:none;
+    }
+
+    .login-right{
+        padding:30px 20px;
+    }
+
+    .login-left h1{
+        font-size:36px;
+    }
+
+    .login-form {
+        width: 100%;
+        max-width: 320px;
+    }
 }

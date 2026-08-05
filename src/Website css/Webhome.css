@@ -450,3 +450,76 @@
     transform: translateY(10px);
   }
 }
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .homedhoni-image {
+    width: 95%;
+    height: auto;
+  }
+
+  .banner-img1,
+  .banner-img3 {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .webmobilehomelink {
+    display: none;
+  }
+
+  .shoptitle, .shoptitle2 {
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .homedhoni-image {
+    width: 95%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .home-banner3 {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .banner-img1,
+  .banner-img3 {
+    height: 280px;
+  }
+
+  .homeproduct-grid {
+    justify-content: center;
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .homeproduct-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .homebackgroundpgbanner {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+
+  .home-quotebanner h2 {
+    font-size: 26px;
+  }
+
+  .home-quotebanner p {
+    font-size: 15px;
+  }
+
+  .homeproduct-containerbanner {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+}

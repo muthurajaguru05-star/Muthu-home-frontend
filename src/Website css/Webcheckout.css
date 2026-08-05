@@ -1,6 +1,8 @@
 .checkoutdiv {
-  width: 650px;
-  margin: 60px auto;
+  width: 92%;
+  max-width: 650px;
+  box-sizing: border-box;
+  margin: 40px auto;
   padding: 35px;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);

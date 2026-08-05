@@ -227,6 +227,8 @@
   .tv-container {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
+    margin-top: 40px;
   }
 
   .iphone-image-section,
@@ -238,5 +240,37 @@
 
   .about-text {
     width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .about-box {
+    padding: 20px 30px;
+  }
+
+  .about-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .about-heading, .about-iphone, .tv-heading {
+    font-size: 24px;
+    margin: 25px 0 15px;
+  }
+
+  .about-image {
+    height: 220px;
+  }
+
+  .about-text, .about-iphonetext, .tv-text {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 18px;
+    box-sizing: border-box;
   }
 }

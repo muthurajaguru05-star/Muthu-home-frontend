@@ -9,6 +9,7 @@ function Navebar() {
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const [userName, setUserName] = useState("");
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
 
   const updateCart = () => {
@@ -97,58 +98,57 @@ useEffect(() => {
         <img src={elc} className="logo" alt="logo" />
       </Link>
 
-      <Link to="/webhome" className="navelink">
-        HOME
-      </Link>
+      <button className="mobile-toggle-btn" onClick={() => setIsMobileOpen(!isMobileOpen)}>
+        <i className={isMobileOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+      </button>
 
-      <Link to="/about" className="navelink">
-        ABOUT
-      </Link>
+      <div className={`nav-menu ${isMobileOpen ? "active" : ""}`}>
+        <Link to="/webhome" className="navelink" onClick={() => setIsMobileOpen(false)}>
+          HOME
+        </Link>
 
-      <Link to="/webproduct" className="navelink">
-        PRODUCT
-      </Link>
+        <Link to="/about" className="navelink" onClick={() => setIsMobileOpen(false)}>
+          ABOUT
+        </Link>
 
-      <Link to="/contact" className="navelink">
-        CONTACT
-      </Link>
+        <Link to="/webproduct" className="navelink" onClick={() => setIsMobileOpen(false)}>
+          PRODUCT
+        </Link>
 
-      <div className="icons">
+        <Link to="/contact" className="navelink" onClick={() => setIsMobileOpen(false)}>
+          CONTACT
+        </Link>
 
-        {userName ? (
-          <>
-            {/* <i className="fa-solid fa-circle-user"></i> */}
-
-            {/* <span className="loginlink">
-              {userEmail}
-            </span> */}
-             <i className="fa-solid fa-circle-user"></i>
-                 <Link to="/webprofile" className="loginlink">
-                
-                <span>{userName}</span>
-                </Link>
-            <button
-              onClick={handleLogout}
-              style={{
-                marginLeft: "10px",
-                padding: "5px 10px",
-                cursor: "pointer",
-                border: "none",
-                borderRadius: "5px",
-                background: "red",
-                color: "#fff"
-              }}
-            >
-              Logout
-            </button>
-          </>
-        ) : (
-          <Link to="/login" className="loginlink">
-            <i className="fa-solid fa-circle-user"></i>
-            <span>Login</span>
-          </Link>
-        )}
-
+        <div className="icons">
+          {userName ? (
+            <>
+               <i className="fa-solid fa-circle-user"></i>
+                   <Link to="/webprofile" className="loginlink" onClick={() => setIsMobileOpen(false)}>
+                  
+                  <span>{userName}</span>
+                  </Link>
+              <button
+                onClick={handleLogout}
+                style={{
+                  marginLeft: "10px",
+                  padding: "5px 10px",
+                  cursor: "pointer",
+                  border: "none",
+                  borderRadius: "5px",
+                  background: "red",
+                  color: "#fff"
+                }}
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link to="/login" className="loginlink" onClick={() => setIsMobileOpen(false)}>
+              <i className="fa-solid fa-circle-user"></i>
+              <span>Login</span>
+            </Link>
+          )}
+        </div>
       </div>
 
       {/* CART */}

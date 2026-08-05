@@ -3,8 +3,7 @@
   min-height: 100vh;
   background: #f8fafc;
   animation: pageFade 0.6s ease;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* PAGE FADE */
@@ -24,6 +23,7 @@
   flex: 1;
   padding: 20px;
   animation: contentUp 0.8s ease;
+  overflow-x: auto;
 }
 
 @keyframes contentUp {
@@ -50,31 +50,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* animation: popIn 0.6s ease; */
-  /* transition: all 0.3s ease; */
-}
-
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  margin-bottom: 20px;
 }
 
 .totalproducts:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-5px);
   box-shadow: 0 18px 35px rgba(0,0,0,0.2);
 }
 
 .totalproducts span {
-  font-size: 16px;
-  /* opacity: 0.9; */
+  font-size: 14px;
   letter-spacing: 0.5px;
-  margin-top: 25px;
 }
 
 .totalproducts h2 {
@@ -85,22 +71,19 @@
 /* ADD PRODUCT BUTTON */
 .addproductclick {
   background: linear-gradient(90deg, #22c55e, #10b981);
-  padding: 10px 15px;
+  padding: 10px 18px;
   border-radius: 10px;
   display: inline-block;
   transition: 0.3s;
   animation: slideDown 0.6s ease;
   box-shadow: 0 8px 18px rgba(34,197,94,0.25);
-  margin-left: 1100px;
-  margin-top: -30px; 
-
-}
-.addproductclick {
-  transform: translateY(-40px); /* 🔥 clean upward move */
+  margin-bottom: 20px;
+  float: right;
 }
 
 .addproductclick:hover {
   filter: brightness(1.1);
+  transform: translateY(-2px);
 }
 
 .addproductclick a {
@@ -115,8 +98,8 @@
   align-items: center;
   gap: 10px;
   animation: fadeDown 0.6s ease;
-   margin-left: 500px;
-  margin-top: -70px;  
+  margin-bottom: 20px;
+  clear: both;
 }
 
 @keyframes fadeDown {
@@ -131,38 +114,25 @@
 }
 
 .productheading i {
+  font-size: 28px;
+  color: #10b981;
   transition: 0.3s;
 }
 
 .productheading:hover i {
   transform: rotate(15deg) scale(1.2);
-  color: #10b981;
 }
 
 /* TABLE */
-/* .producttable {
+.producttable {
   width: 100%;
   border-collapse: collapse;
   background: white;
   border-radius: 14px;
-   table-layout: fixed; 
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   animation: tableFade 0.8s ease;
-   display: block;
-  max-height: 70vh;
-  overflow-y: auto;
-
-} */
- .producttable {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 14px;
-  table-layout: fixed;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  animation: tableFade 0.8s ease;
+  min-width: 650px;
 }
 
 @keyframes tableFade {
