@@ -11,7 +11,7 @@ function Lastnavebar() {
         <div className="info-section">
           <span className="footer-title">More Information</span>
 
-          <Link to="/webhome" className="footer-link">HOME</Link>
+          <Link to="/" className="footer-link">HOME</Link>
           <Link to="/about" className="footer-link">ABOUT</Link>
           <Link to="/webproduct" className="footer-link">PRODUCTS</Link>
           <Link to="/contact" className="footer-link">CONTACT</Link>

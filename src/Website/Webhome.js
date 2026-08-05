@@ -108,7 +108,7 @@ const handleWheel = (e) => {
 
          <Navebarhome />
          <h2 className="home-quotebanner"    onMouseEnter={() => setBgImage(day)}
-              onMouseLeave={() => setBgImage(night)}>Smart</h2>
+              onMouseLeave={() => setBgImage(night)}>Smart Appliances for a Smarter Home</h2>
 
           <p className="home-quotebanner p"   onMouseEnter={() => setBgImage(day)}
               onMouseLeave={() => setBgImage(night)}>
