@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navebar from "./Navebar";
-import Lastnavebar from "./Lastnavebar";
+import FooterNavbar from "./FooterNavbar";
 import "../Website css/Webcheckout.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -187,7 +187,7 @@ const handleOrder = async (e) => {
         </form>
       </div>
 
-      <Lastnavebar />
+      <FooterNavbar />
     </>
   );
 }

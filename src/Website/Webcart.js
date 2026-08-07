@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navebar from "./Navebar";
-import Lastnavebar from "./Lastnavebar";
+import FooterNavbar from "./FooterNavbar";
 import "../Website css/Webcart.css";
 
 function Webcart() {
@@ -310,7 +310,7 @@ function Webcart() {
         </div>
       </div>
 
-      <Lastnavebar />
+      <FooterNavbar />
     </>
   );
 }

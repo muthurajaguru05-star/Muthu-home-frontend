@@ -4,7 +4,7 @@ import "../Website css/Webabout.css";
 import aboutac from "../Website jpg/aboutac.jpg";
 import applephone from "../Website jpg/applephone.jpg";
 import abouttv from "../Website jpg/abouttv.jpg";
-import Lastnavebar from "./Lastnavebar";
+import FooterNavbar from "./FooterNavbar";
 import { useNavigate } from "react-router-dom";
 
 function Webabout() {
@@ -99,7 +99,7 @@ function Webabout() {
 
       </div>
 
-      <Lastnavebar />
+      <FooterNavbar />
     </>
   );
 }

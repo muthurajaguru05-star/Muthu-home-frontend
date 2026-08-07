@@ -5,7 +5,7 @@ import "../Website css/Webproduct.css";
 import axios from "axios";
 import { FaShoppingCart } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
-import Lastnavebar from "./Lastnavebar";
+import FooterNavbar from "./FooterNavbar";
 
 function Webproduct() {
   const navigate = useNavigate();
@@ -154,7 +154,11 @@ function Webproduct() {
               {category.map((value) => (
                 <button
                   key={value._id}
-                  className="category-btn"
+                  className={`category-btn ${
+                    selectedCategory === value.name
+                      ? "active-category"
+                      : ""
+                  }`}
                   onClick={() =>
                     filterCategory(value.name)
                   }
@@ -263,7 +267,7 @@ function Webproduct() {
         </div>
       )}
 
-      <Lastnavebar />
+      <FooterNavbar />
     </>
   );
 }

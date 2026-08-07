@@ -7,6 +7,8 @@
   background-size: 600% 600%;
   padding: 15px 50px;
   color: white;
+  gap: 12px;
+  flex-wrap: wrap;
 
   animation: navbarBg 10s ease infinite, slideDown 0.6s ease;
   position: sticky;
@@ -40,6 +42,7 @@
   border-radius: 50%;
   transition: all 0.5s ease;
   box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  flex-shrink: 0;
 }
 
 /* logo hover spin */
@@ -57,6 +60,7 @@
   margin: 0 10px;
   position: relative;
   transition: 0.3s ease;
+  white-space: nowrap;
 }
 
 /* underline animation */
@@ -100,7 +104,9 @@
 .icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .icons i {
@@ -112,6 +118,71 @@
 /* cart icon animation */
 .cart-icon i {
   animation: cartPulse 2s infinite;
+}
+
+.mobile-toggle-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .mobile-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0 4px;
+    gap: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu .navelink,
+  .nav-menu .loginlink {
+    margin: 0;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .cart-wrapper {
+    margin-left: auto;
+  }
 }
 
 @keyframes cartPulse {
@@ -327,7 +398,7 @@
   height: 330px;
   display: block;
   transition: transform 0.5s ease;
-
+  object-fit: cover;
 }
 
 .hero-image:hover {
@@ -337,24 +408,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 40px; */
   width: 100%;
-  padding: 0px;
+  padding: 20px 24px;
   background-color: #111;
   box-sizing: border-box;
+  gap: 20px;
 }
 
 
 /* Right Side Box */
 .content-box {
   width: 35%;
-  /* background-color: #222; */
+  min-width: 280px;
   margin-right: 500px;
   padding: 30px;
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* Sections */
@@ -363,6 +435,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  min-width: 140px;
 }
 
 /* Title */
@@ -379,6 +452,7 @@
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .footer-link:hover {
@@ -397,6 +471,55 @@
   color: orange;
   padding-left: 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .main-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 14px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    max-height: 220px;
+  }
+
+  .content-box {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    padding: 0;
+    gap: 16px;
+  }
+
+  .info-section,
+  .category-section {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-title {
+    font-size: 20px;
+  }
+
+  .footer-link,
+  .category-item {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .cart-dropdown {
+    width: min(92vw, 320px);
+    right: -8px;
+  }
 }
 
 /* Mobile toggle & responsive nav-menu */

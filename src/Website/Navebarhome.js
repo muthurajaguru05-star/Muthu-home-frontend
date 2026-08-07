@@ -87,7 +87,7 @@ function Navebarhome() {
   return (
     <div className="navbarhome">
 
-      <Link to="/webhome">
+      <Link to="/">
         <img src={elc} className="logo" alt="logo" />
       </Link>
 
@@ -96,7 +96,7 @@ function Navebarhome() {
       </button>
 
       <div className={`nav-menu ${isMobileOpen ? "active" : ""}`}>
-        <Link to="/webhome" className="navelink" onClick={() => setIsMobileOpen(false)}>HOME</Link>
+        <Link to="/" className="navelink" onClick={() => setIsMobileOpen(false)}>HOME</Link>
         <Link to="/about" className="navelink" onClick={() => setIsMobileOpen(false)}>ABOUT</Link>
         <Link to="/webproduct" className="navelink" onClick={() => setIsMobileOpen(false)}>PRODUCT</Link>
         <Link to="/contact" className="navelink" onClick={() => setIsMobileOpen(false)}>CONTACT</Link>

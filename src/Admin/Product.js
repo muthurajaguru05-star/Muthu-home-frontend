@@ -82,9 +82,13 @@ const handleDelete = (id) => {
           <h2>{getproduct.length}</h2>
         </div>
 
-        <div className="addproductclick">
-          <Link to="/addproduct">Add product</Link>
-        </div>
+        {/* <Link to="/addproduct" className="addproductclick">
+          Add product
+        </Link> */}
+
+        <Link  to="/addproduct" className="addproductclick">
+          Add Product
+        </Link>
 
         <div className="productheading">
           <i className="fa-brands fa-product-hunt"></i>

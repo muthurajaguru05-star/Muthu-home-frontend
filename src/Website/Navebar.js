@@ -94,7 +94,7 @@ useEffect(() => {
   return (
     <div className="navbar">
 
-      <Link to="/webhome">
+      <Link to="/">
         <img src={elc} className="logo" alt="logo" />
       </Link>
 
@@ -103,7 +103,7 @@ useEffect(() => {
       </button>
 
       <div className={`nav-menu ${isMobileOpen ? "active" : ""}`}>
-        <Link to="/webhome" className="navelink" onClick={() => setIsMobileOpen(false)}>
+        <Link to="/" className="navelink" onClick={() => setIsMobileOpen(false)}>
           HOME
         </Link>
 

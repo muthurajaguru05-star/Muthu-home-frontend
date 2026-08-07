@@ -20,11 +20,13 @@ function Dashboard() {
   const [users, setUsers] = useState([]);
   const [products, setProducts] = useState([]);
   const [categorys, setCategorys] = useState([]);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     fetchUsers();
     fetchProducts();
     fetchcategory();
+    fetchOrders();
   }, []);
 
   const fetchUsers = () => {
@@ -48,6 +50,13 @@ function Dashboard() {
       .catch((err) => console.log(err));
   };
 
+  const fetchOrders = () => {
+    axios
+      .get("http://localhost:5001/api/orders")
+      .then((res) => setOrders(res.data))
+      .catch((err) => console.log(err));
+  };
+
   const barData = [
     {
       name: "Users",
@@ -62,8 +71,8 @@ function Dashboard() {
       value: categorys.length
     },
     {
-      name: "Sales",
-      value: 140
+      name: "Sales Orders",
+      value: orders.length
     }
   ];
 
@@ -71,7 +80,7 @@ function Dashboard() {
     { name: "Users", value: users.length },
     { name: "Products", value: products.length },
     { name: "Category", value: categorys.length },
-    { name: "Sales", value: 140 }
+    { name: "Sales Orders", value: orders.length }
   ];
 
   const COLORS = ["#3498db", "#2ecc71", "#f39c12", "#e91e63"];
@@ -105,8 +114,8 @@ function Dashboard() {
           </div>
 
           <div className="card sales-card">
-            <h3>Sales</h3>
-            <span>140</span>
+            <h3>Sales Orders</h3>
+            <span>{orders.length}</span>
           </div>
 
         </div>

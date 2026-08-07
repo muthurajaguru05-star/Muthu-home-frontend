@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navebar from "./Navebar";
 import "../Website css/Webproductinfo.css";
-import Lastnavebar from "./Lastnavebar";
+import FooterNavbar from "./FooterNavbar";
 
 function Webproductinfo() {
   const navigate = useNavigate();
@@ -179,7 +179,7 @@ function Webproductinfo() {
 
       </div>
 
-      <Lastnavebar />
+      <FooterNavbar />
     </>
   );
 }

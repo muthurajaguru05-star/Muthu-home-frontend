@@ -7,7 +7,7 @@ import homedhoni from "../Website jpg/homebannerdhoni2.jpg";
 import homeiyer from "../Website jpg/iyerhomebanner.jpg";
 import homenbannerdhoni from "../Website jpg/dhonihomebanner.jpg";
 import { FaShoppingCart } from "react-icons/fa";
-import Lastnavebar from "./Lastnavebar";
+import FooterNavbar from "./FooterNavbar";
 import apple from "../Website jpg/homevivopg.jpg"
 import washing from "../Website jpg/homewashing1.jpg"
 import ac from "../Website jpg/ac.jpg"
@@ -108,7 +108,7 @@ const handleWheel = (e) => {
 
          <Navebarhome />
          <h2 className="home-quotebanner"    onMouseEnter={() => setBgImage(day)}
-              onMouseLeave={() => setBgImage(night)}>Smart</h2>
+              onMouseLeave={() => setBgImage(night)}>Smart & Home Appliances</h2>
 
           <p className="home-quotebanner p"   onMouseEnter={() => setBgImage(day)}
               onMouseLeave={() => setBgImage(night)}>
@@ -331,7 +331,7 @@ const handleWheel = (e) => {
         </div>
       </div>
 
-      <Lastnavebar />
+      <FooterNavbar />
       </div>
 
     </>

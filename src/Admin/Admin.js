@@ -27,48 +27,7 @@ function Admin() {
                     ></i>
                 </div>
 
-                {/* <div>
-
-                    <button className="adminbtn">
-                        <Link to="/dashboard" className="adminlink">Dashboard</Link>
-                        <i className="fa-solid fa-gauge-high"></i>
-                    </button>
-
-
-
-                    <button className="adminbtn">
-                        <Link to="/product" className="adminlink">Product</Link>
-                        <i className="fa-solid fa-box"></i>
-                    </button>
-
-
-                    <button className="adminbtn">
-                        <Link to="/categore" className="adminlink">Category</Link>
-                        <i className="fa-solid fa-layer-group"></i>
-                    </button>
-
-
-
-                    <button className="adminbtn">
-                        <Link to="/user" className="adminlink">User</Link>
-                        <i className="fa-solid fa-user"></i>
-                    </button>
-
-        
-
-                    <button className="adminbtn">
-                        <Link to="/order" className="adminlink">Orders</Link>
-                        <i className="fa-solid fa-bag-shopping"></i>
-                    </button>
-
-                
-
-                    <button className="adminbtn">
-                        <Link to="/logout" className="adminlink">Logout</Link>
-                        <i className="fa-solid fa-right-from-bracket"></i>
-                    </button>
-
-                </div> */}
+             
 
                           <div className="adminmenu">
 
