@@ -37,7 +37,6 @@ function Product() {
 
   const totalPages = Math.ceil(getproduct.length / productsPerPage);
 
-
   const handleEdit = (item) => {
   navigate("/addproduct", { state: item });
 };
@@ -63,7 +62,6 @@ const handleDelete = (id) => {
 
         })
         .catch((err) => console.log(err));
-
     }
 
   });

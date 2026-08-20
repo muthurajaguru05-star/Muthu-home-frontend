@@ -28,11 +28,10 @@ function Webproductinfo() {
 
     // ADD TO CART
   const addToCart = (item) => {
+    // Login Check
+    const username = localStorage.getItem("name");
 
-      // Login Check
-    const user = JSON.parse(localStorage.getItem("user"));
-
-      if (!user) {
+    if (!username) {
       Swal.fire({
         icon: "warning",
         title: "Please Login First",
@@ -41,23 +40,22 @@ function Webproductinfo() {
       }).then(() => {
         navigate("/login");
       });
+      return;
+    }
 
-       return;
-     }
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartKey = `cart_${username}`;
+    let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
 
     const exists = cart.find((p) => p._id === item._id);
 
-      if (exists) {
+    if (exists) {
       exists.qty += 1;
       cart = cart.map((p) => (p._id === item._id ? exists : p));
-     } else {
+    } else {
       cart.push({ ...item, qty: 1 });
-     }
+    }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-
+    localStorage.setItem(cartKey, JSON.stringify(cart));
     window.dispatchEvent(new Event("cartUpdated"));
 
     Swal.fire({
@@ -66,8 +64,8 @@ function Webproductinfo() {
       title: "Added To Cart Successfully",
       showConfirmButton: false,
       timer: 1500,
-     });
-    };
+    });
+  };
 
      if (!product) {
      return <h2>Loading...</h2>;
@@ -131,9 +129,9 @@ function Webproductinfo() {
                 onClick={() => {
 
                   // Login Check
-                  const user = JSON.parse(localStorage.getItem("user"));
+                  const username = localStorage.getItem("name");
 
-                  if (!user) {
+                  if (!username) {
                     Swal.fire({
                       icon: "warning",
                       title: "Please Login First",
@@ -145,9 +143,9 @@ function Webproductinfo() {
 
                     return;
                   }
-
-                  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+                  
+                  const cartKey = `cart_${username}`;
+                  let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
                   const exists = cart.find(
                     (p) => p._id === product._id
                   );
@@ -161,15 +159,10 @@ function Webproductinfo() {
                     cart.push({ ...product, qty: 1 });
                   }
 
-                  localStorage.setItem("cart", JSON.stringify(cart));
-
+                  localStorage.setItem(cartKey, JSON.stringify(cart));
                   window.dispatchEvent(new Event("cartUpdated"));
-
                   navigate("/cart");
-                }}
-              >
-                BUY NOW
-              </button>
+                }}>BUY NOW</button>
 
             </div>
 

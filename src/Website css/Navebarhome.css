@@ -103,7 +103,7 @@
   
 
 /* ICONS */
-.icons {
+.homeicons {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -385,14 +385,14 @@
   }
 }
 
-.logout-btn{
+.logout-btn {
   border:none;
   padding:5px 10px;
   background:red;
   color:white;
   border-radius:5px;
   cursor:pointer;
-  position: relative;
+  margin-left: 10px;
 }
 
 @media(max-width: 768px) {

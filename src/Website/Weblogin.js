@@ -74,7 +74,7 @@ export default function LoginForm() {
       if (user.role === "admin") {
         navigate("/dashboard");
       } else {
-        navigate("/webhome");
+        navigate("/");
       }
     }, 1500);
   };

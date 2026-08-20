@@ -27,8 +27,6 @@ function Admin() {
                     ></i>
                 </div>
 
-             
-
                           <div className="adminmenu">
 
                                      <button className="adminbtn active">
@@ -60,10 +58,8 @@ function Admin() {
                                     <Link to="/logout" className="adminlink">Logout</Link>
                                     <i className="fa-solid fa-right-from-bracket"></i>
                                      </button>
-
-</div>
-
-            </div>
+     </div>
+       </div>
         </>
     );
 }

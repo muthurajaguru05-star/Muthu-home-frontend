@@ -14,7 +14,7 @@ function Navebarhome() {
 
   // CART UPDATE (USER WISE)
   const updateCart = () => {
-    const username = localStorage.getItem("username");
+    const username = localStorage.getItem("name");
 
     if (!username) {
       setCartItems([]);

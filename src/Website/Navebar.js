@@ -121,27 +121,19 @@ useEffect(() => {
 
         <div className="icons">
           {userName ? (
-            <>
+            <div className="user-info">
                <i className="fa-solid fa-circle-user"></i>
                    <Link to="/webprofile" className="loginlink" onClick={() => setIsMobileOpen(false)}>
                   
                   <span>{userName}</span>
                   </Link>
               <button
+                className="logout-btn"
                 onClick={handleLogout}
-                style={{
-                  marginLeft: "10px",
-                  padding: "5px 10px",
-                  cursor: "pointer",
-                  border: "none",
-                  borderRadius: "5px",
-                  background: "red",
-                  color: "#fff"
-                }}
               >
                 Logout
               </button>
-            </>
+            </div>
           ) : (
             <Link to="/login" className="loginlink" onClick={() => setIsMobileOpen(false)}>
               <i className="fa-solid fa-circle-user"></i>
