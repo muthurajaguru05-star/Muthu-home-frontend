@@ -160,7 +160,6 @@ useEffect(() => {
 
         {showCart && (
           <div className="cart-dropdown">
-
             <h4>Cart Items</h4>
 
             {cartItems.length === 0 ? (
